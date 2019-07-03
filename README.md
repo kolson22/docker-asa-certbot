@@ -8,6 +8,6 @@
 - key=password
 
 ```
-docker build -t kolson22/asa-certbot https://github.com/kolson22/docker-asa-certbot
+docker build -t kolson22/asa-certbot https://github.com/kolson22/docker-asa-certbot.git
 docker run --rm -e HE_Username=<username> -e HE_Password=<password> -e domain=<domain in he> -e key=<key to decrypt pkcs12> kolson22/asa-certbot
 ```
