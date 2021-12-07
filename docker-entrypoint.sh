@@ -2,7 +2,7 @@
 
 set -e
 
-acme.sh --issue --dns dns_he -d $domain > /dev/null
+acme.sh --issue --insecure --dns dns_he -d $domain > /dev/null
 
 openssl pkcs12 -export -in /root/.acme.sh/$domain/$domain.cer -inkey /root/.acme.sh/$domain/$domain.key -certfile /root/.acme.sh/$domain/ca.cer -out /tmp/acme.sh/$domain.p12 -passout pass:$key
 
