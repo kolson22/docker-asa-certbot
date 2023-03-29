@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag kolson22/docker-asa-certbot:$(date +%s)
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: lazer2214/asa-certbot
         username: ${{ secrets.DOCKER_USERNAME }}
